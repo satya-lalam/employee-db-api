@@ -1,0 +1,12 @@
+package com.firm.employeedbapi;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EmployeeDbApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EmployeeDbApiApplication.class, args);
+	}
+}
