@@ -1,5 +1,7 @@
 package com.firm.employeedbapi.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +24,13 @@ public class WebController {
 	
 	@RequestMapping(path="/persistemployee", method=RequestMethod.POST)
 	public Employee persisitEmployee(@RequestBody Employee employee){
+		System.out.println(employee);
 		return employeeService.persistEmployee(employee);
+	}
+	
+	@RequestMapping(path="/employees", method=RequestMethod.GET)
+	public List<Employee> getAllEmployees(){
+		return employeeService.getAllEmployees();
 	}
 
 }
