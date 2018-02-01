@@ -21,5 +21,10 @@ public class EmployeeService {
 	public List<Employee> getAllEmployees(){
 		return employeeRepo.findAll();
 	}
+	
+	public void deleteEmployee(Employee employee){
+		
+		employeeRepo.delete(employee);;
+	}
 
 }

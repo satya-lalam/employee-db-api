@@ -34,5 +34,10 @@ public class WebController {
 	public List<Employee> getAllEmployees(){
 		return employeeService.getAllEmployees();
 	}
+	
+	@RequestMapping(path="/employees", method=RequestMethod.DELETE)
+	public void deleteEmployee(@RequestBody Employee employee){
+		employeeService.deleteEmployee(employee);	
+	}
 
 }
